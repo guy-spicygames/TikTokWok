@@ -82,18 +82,54 @@ jQuery(function() {
         
     }
     
-    jQuery('.scroll-arrow a[href^="#"]').on('click',function (e) {
-            e.preventDefault();
-            var target = this.hash;
-            var $target = $(target);
-            jQuery('html, body').stop().animate({
-                'scrollTop': $target.offset().top
-            }, 900, 'swing', function () {
-               
-            });
-        });
-     
+ 
+    
+   $('.bounce a[href^="#"]').on('click',function (e) {
+	    e.preventDefault();
+	    var target = this.hash;
+	    var $target = $(target);
+	    $('html, body').stop().animate({
+	        'scrollTop': $target.offset().top
+	    }, 900, 'swing', function () {
+	        // window.location.hash = target;
+	    });
+	});
+    
+    
+    //menu scroll
+    
+     var sections = $('section')
+          , nav = $('nav')
+          , nav_height = nav.outerHeight();
 
+        $(window).on('scroll', function () {
+          var cur_pos = $(this).scrollTop();
+
+          sections.each(function() {
+            var top = $(this).offset().top - nav_height,
+                bottom = top + $(this).outerHeight();
+
+            if (cur_pos >= top && cur_pos <= bottom) {
+              nav.find('a').removeClass('active');
+              sections.removeClass('active');
+
+              $(this).addClass('active');
+              nav.find('a[href="#'+$(this).attr('id')+'"]').addClass('active');
+            }
+          });
+        });
+
+        nav.find('a').on('click', function () {
+          var $el = $(this)
+            , id = $el.attr('href');
+
+          $('html, body').animate({
+            scrollTop: $(id).offset().top - nav_height
+          }, 500);
+
+          return false;
+        });
+    
     
     /**ENABLE MAP SCROLL**/
     jQuery(".map-cover").click(function () {
@@ -105,32 +141,36 @@ jQuery(function() {
     
     
     /**Fade in elements one by one - animation delay**/
-    jQuery('#parent .child')
-        .each(function (index) {
-        var _this = this;
-        setTimeout(function () {
-            $(_this).fadeIn('slow');
-        }, 1000 * index);
+//    jQuery('#parent .child')
+//        .each(function (index) {
+//        var _this = this;
+//        setTimeout(function () {
+//            $(_this).fadeIn('slow');
+//        }, 1000 * index);
+//    });
+    
+    
+    
+    
+
+    jQuery('.js-tabs').easytabs({
+      animate: false,
+        tabActiveClass: "-active",
+        panelActiveClass: "-active",
+        panelContext: $('.panels-container'),
+        defaultTab: "li:first-child",
+        tabs: "ul.tabs-list > li"
     });
 
-     
-    jQuery('#nav').onePageNav({
-        currentClass: 'current',
-        changeHash: false,
-        scrollSpeed: 750,
-        scrollThreshold: 0.5,
-        filter: '',
-        easing: 'swing',
-        begin: function() {
-            //I get fired when the animation is starting
-        },
-        end: function() {
-            //I get fired when the animation is ending
-        },
-        scrollChange: function($currentListItem) {
-            //I get fired when you enter a section and I pass the list item of the section
-        }
+
+    jQuery('.tabs-list > li').on('click', function() {
+      if (jQuery(this).hasClass('-active')) {
+        jQuery(this).parent().toggleClass('-is-open');
+      }
     });
+
+  
+         
     
     
 });
