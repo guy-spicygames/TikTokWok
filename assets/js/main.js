@@ -33,11 +33,7 @@ jQuery(function() {
     ==================================================*/
     jQuery(".nav-trigger").click(function() {
       jQuery(this).toggleClass("highlight");
-      jQuery(this).closest().children().addClass("aa");
       jQuery('body').toggleClass("nav-visible"); 
-        
-      
-        
         
    });
 
@@ -154,7 +150,7 @@ jQuery(function() {
     
 
     jQuery('.js-tabs').easytabs({
-      animate: false,
+      animate: true,
         tabActiveClass: "-active",
         panelActiveClass: "-active",
         panelContext: $('.panels-container'),

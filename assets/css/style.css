@@ -1993,9 +1993,11 @@ section.contactus .content-div span {
     .tabs-list-container {
         width: 90%;
         border: 1px solid #fff;
+/*
          -webkit-transition: all 300ms ease-in-out 0s;
         -moz-transition: all 300ms ease-in-out 0s;
         transition: all 300ms ease-in-out 0s;
+*/
     }
 }
 .tabs-list {
@@ -2021,11 +2023,11 @@ section.contactus .content-div span {
     padding-bottom: 0;
 }
 .tabs-list li.-active{
-/*    border-bottom: 2px solid #ed3524;*/
+    border-bottom: 2px solid #ed3524;
 }
 @media (max-width: 47.999em) {
     .tabs-list li {
-        width: 100%;
+        width: 50%;
         padding: 0;
         margin: 0;
     }
@@ -2039,12 +2041,14 @@ section.contactus .content-div span {
     }
 }@media (max-width: 47.999em) {
     .tabs-list {
-        flex-direction: column;
+        flex-direction: row;
         height: 45px;
         overflow: hidden;
+/*
         -webkit-transition: all 300ms ease-in-out 0s;
         -moz-transition: all 300ms ease-in-out 0s;
         transition: all 300ms ease-in-out 0s;
+*/
     }
     .tabs-list{
         width: 100%;
@@ -2057,6 +2061,14 @@ section.contactus .content-div span {
         border: none;
 
     }
+    .tabs-list li.-active{
+        width: 100%;
+    }
+    .tabs-list li.-active{
+    border-bottom: none;
+        margin: -10px 0 0;
+}
+    
     .tab{
         padding: 10px 30px;
         font-size: 18px;
