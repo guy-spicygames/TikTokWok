@@ -12,7 +12,9 @@ jQuery(function() {
         }
     });	
      setTimeout(function(){
-             AOS.init();
+             AOS.init({
+                 duration: 1200,
+             });
         }, 300);
     
      
@@ -34,6 +36,7 @@ jQuery(function() {
     jQuery(".nav-trigger").click(function() {
       jQuery(this).toggleClass("highlight");
       jQuery('body').toggleClass("nav-visible"); 
+      jquery('.header-right .main-menu').css('backgrond:red;');
         
    });
 
@@ -135,18 +138,7 @@ jQuery(function() {
     });
 
     
-    
-    /**Fade in elements one by one - animation delay**/
-//    jQuery('#parent .child')
-//        .each(function (index) {
-//        var _this = this;
-//        setTimeout(function () {
-//            $(_this).fadeIn('slow');
-//        }, 1000 * index);
-//    });
-    
-    
-    
+   
     
 
     jQuery('.js-tabs').easytabs({
@@ -165,9 +157,8 @@ jQuery(function() {
       }
     });
 
-  
-         
-    
-    
-});
 
+    
+    
+   
+});
