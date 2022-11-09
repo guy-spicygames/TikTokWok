@@ -10,42 +10,65 @@
 }
 
 @media only screen and (min-width: 1200px)and (max-width: 1365px) {
+    .headerInner{max-width: 1050px;}
+    .social-links ul li a img {width: 40px;height: 40px;}
+    .social-links ul li {padding: 5px 0;}
+    #header-logo img{max-height: 155px;}
+    .LogoCentered ul.menu li#header-logo{height: 155px;}
+    .social-links{top: 45px;}
     
 }
 
-@media only screen and (min-width: 1025px)and (max-width: 1170px) {
+@media only screen and (min-width: 1025px)and (max-width: 1199px) {
     .headerInner .languageLinkHolder{top: 145px;}
+    .headerInner{max-width: 900px;}
+    .social-links ul li a img {width: 40px;height: 40px;}
+    .social-links ul li {padding: 5px 0;}
+    #header-logo img{max-height: 155px;}
+    .LogoCentered ul.menu li#header-logo{height: 135px;margin: 0 20px;}
+    .social-links{top: 35px;}
+    ul.menu li{margin: 0 5px;}
+    ul.menu li a{padding: 5px 9px;}
+    .main-outercon.fixed .LogoCentered ul.menu li#header-logo {height: 125px;margin: 0 20px;}
+    .section-bg-block h2{font-size: 45px;padding: 0 30px;}
+    .title-div h2:before{width: 15px;height: 15px;top: 18px;}
+    .title-div h2:after{width: 15px;height: 15px;top: 18px;}
+    .grid-boxes .grid-box-title a{font-size: 35px;width: 185px;height: 185px;padding: 67px 0;}
+    section.aboutUs .grid-box-title{bottom: 109px;}
+    .section-bg-block{padding: 40px 0px 0;}
+    
+    
+    
 }
 
 @media (max-width: 1024px){
     .nav-trigger {display: block;z-index: 1;}
     .mobile-menu {display: block;}
     .headerInner .menu {display: none;}    
-    .header-container{top: 0;padding: 25px 20px;background: #ebebeb;height: 83px;}
+    .header-container{top: 0;padding: 25px 20px;background: #fff;height: 83px;}
     
     .nav-visible .header-container {position: fixed;}
     .nav-visible .header-bottom {background: #E00109;}
     .nav-visible .mob-logo {display: block;padding: 0 0 0 3px;}   
-    .main-menu {width: 100%;display: none;padding-right: 0;height: auto;position: fixed;background: #ebebeb;
-        top: 83px;left: 0;z-index: -1;opacity: 0;visibility: hidden;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;overflow: hidden;overflow-y: auto;text-align: left;}
+    .main-menu {width: 100%;display: none;padding-right: 0;height: auto;position: fixed;background: #fff;
+        top: 83px;right: 0;z-index: -1;opacity: 0;visibility: hidden;-webkit-transition: all .3s ease-in-out;-moz-transition: all .3s ease-in-out;-ms-transition: all .3s ease-in-out;-o-transition: all .3s ease-in-out;overflow: hidden;overflow-y: auto;text-align: left;}
     .nav-visible .main-menu {display: inline-block;z-index: 9999;opacity: 1;visibility: visible;max-width: 280px;padding: 0 0 20px;}
     .main-menu ul li {width: 100%;margin: 0;padding:  0;text-align: center;margin: 0px;}
     .main-menu ul {display: block;padding:  0;right: 0;left: inherit;}
     .main-menu ul li a {font-size: 25px;}
     
-    .main-menu nav>ul>li:last-child {margin-left: 0;padding: 10px 35px;}
     .main-menu nav>ul>li:last-child>a {border-radius: 0;}   
     .main-menu ul li.active>a {color: #fff;}
     .main-menu ul li:hover>a {color: #fff;}
-    .main-menu ul li a {position: relative;display: inline-block;color: #000;padding: 5px 10px;border: none;}    
-    .main-menu ul li a:hover,.main-menu ul li.active>a {color: #fff;}     
+    .main-menu ul li a {position: relative;display: inline-block;color: #000;padding: 5px 10px;border: none;width: 100%;}    
+    .main-menu ul li a:hover,.main-menu ul li.active>a {color: #fff;background: #000;width: 100%;}     
     .main-menu ul li a img{display: none;}
     .main-menu ul li:hover > a {background: transparent;}
     
     .mobile-logo{width: 70px;position: absolute;top: 6px;left: 0;right: 0;margin: 0 auto;text-align: center;}
     .mobile-logo a{display: block;}
     .mobile-logo img{max-width: 100%;max-height: 70px;}
-    .main-menu ul li a:hover, .main-menu ul li a:focus, .main-menu ul li a:active, .main-menu ul li.active > a {  border:none;}
+    .main-menu ul li a:hover, .main-menu ul li a:focus, .main-menu ul li a:active, .main-menu ul li.active > a {  border:none;background: #000;width: 100%;}
     .mobile-menu  .social-links svg{display: inline-block;height: 16px;width: 16px;}    
     .mobile-menu .social-links {display: -webkit-box;display: -moz-box;display: -ms-flexbox;display: -webkit-flex;display: flex;-webkit-justify-content: center;-moz-justify-content: center;justify-content: center;}
     .mobile-menu .social-links a{background: #161616;border-radius: 50%;padding: 0;width: 30px;height: 30px;text-align: center;margin: 0 4px;}
@@ -68,6 +91,12 @@
     .section-bg-block.menu .title-div {margin: 0 0 35px;}
      .section-bg-block.menu .item-box-image{border: 4px solid rgba(255, 255, 255, 0.1);}
     #AccessabilityModal .modal-body{max-height: 80vh;overflow: auto;}
+    .social-links ul li a img {width: 35px;height: 35px;}
+    .social-links ul li {padding: 4px 0;}
+    .social-links{top: 87px;z-index: 9;}
+    .grid-boxes .grid-box-title a{font-size: 25px;width: 145px;height: 145px;padding: 56px 0;}
+    section.aboutUs .grid-box-title{bottom: 80px;}
+    
     
 }
 
@@ -77,14 +106,19 @@
     .waze-navigation{display: none;}
     .mobile-menu .languageLinkHolder{position: absolute;right: 30px;font-size: 26px;top: 20px;}
 }
+
 @media only screen and (min-width: 992px) and (max-width: 1024px) {
     .mobile-menu .languageLinkHolder{display: none; }
+    .section-bg-block h2{font-size: 50px;padding: 0 30px;}
+    .title-div h2:before{width: 15px;height: 15px;top: 18px;}
+    .title-div h2:after{width: 15px;height: 15px;top: 18px;}
+    section.aboutUs .content-div p{font-size: 21px;}
+    section .content-div{max-width: 510px;}
     
     
 }
 @media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape){
-    .section-bg-block h2 {font-size: 7vw;}
-    section.aboutUs .grid-boxes{padding-top: 75px;}
+/*    .section-bg-block h2 {font-size: 7vw;}*/
 }
 
 
@@ -99,6 +133,16 @@
     .menumoduleitem{width: 100%;}
     .tabs-list li{padding: 5px 10px 0;}
     .menumodal.tabmodal .modal-dialog {max-width: 90%;}
+    
+    .section-bg-block h2{font-size: 40px;padding: 0 30px;}
+    .title-div h2:before{width: 15px;height: 15px;top: 15px;}
+    .title-div h2:after{width: 15px;height: 15px;top: 15px;}
+    section.aboutUs .content-div p{font-size: 21px;}
+    section .content-div{max-width: 510px;}
+    
+    
+    
+    
 }
 
 @media only screen and (max-width: 767px) {
@@ -111,7 +155,7 @@
     .header-container{height: 53px;padding: 5px 20px;}
     .nav-trigger span:nth-child(3){margin-top: 3px;}
     .nav-trigger span:nth-child(2){margin-top: 7px;}
-    .nav-trigger{left: 20px;top: 21px;}
+    .nav-trigger{right: 20px;top: 21px;}
     .main-outercon.fixed .header-container {height: 53px;}
     .main-outercon.fixed .nav-trigger {top: 21px;}
     .main-menu{top: 53px;}
@@ -119,17 +163,20 @@
     .nav-visible .main-menu{max-width: 100%;}
     .main-menu ul{padding: 65px 0 0;}
     .mobile-logo{z-index: 9999;}    
-    .mobile-menu .phone-icon {width: 40px;height: 40px;background: #161616;padding: 0;margin: 0;display: inline-block !important;border-radius: 50%;position: absolute;right: 20px;top: 8px;text-align: center;}
-    .mobile-menu .phone-icon i{font-size: 17px;transform: rotate(90deg);-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg); }
-    .mobile-menu .waze-navigation {display: inline-block !important;width: 40px;height: 40px;background: #161616;border-radius: 50%;position: absolute;top: 8px;padding: 0;right: 65px;}
+    .mobile-menu .phone-icon {width: 40px;height: 40px;background: #161616;padding: 0;margin: 0;display: inline-block !important;border-radius: 50%;position: absolute;left: 10px;top: 6px;text-align: center;}
+    .mobile-menu .phone-icon i{font-size: 17px;transform: rotate(90deg);-webkit-transform: rotate(90deg);-moz-transform: rotate(90deg);-ms-transform: rotate(90deg);-o-transform: rotate(90deg); position: relative;top: 3px;}
+    .mobile-menu .waze-navigation {display: inline-block !important;width: 40px;height: 40px;background: #161616;border-radius: 50%;position: relative;top: 2px;padding: 0;left: 35px;}
+    .waze-navigation path.st0 {  fill: transparent;}
     .mobile-menu .phone-icon i {color: #fff;}
-    .mobile-menu .phone-icon i {color: #fff;}
-    .mobile-menu .waze-navigation a {position: absolute;width: 100%;height: 100%;}
+    .mobile-menu .waze-navigation a {position: absolute;width: 100%;height: 100%;left: 0;right: 0;margin: 0 auto;}
     .mobile-menu .waze-navigation svg {max-width: 30px;width: 25px;position: absolute;left: 50%;top: 50%;transform: translate(-50%, -50%);}
     .languageLinkHolder{line-height: 1;position: absolute;background: #EBEBEB;right: 25px;top: 64px;padding: 5px 11px;font-family: 'BarlowCondensedMedium';color: #161616;text-transform: uppercase;z-index: 9999;}
     
     
-    .section-bg-block h2{font-size: 10vw;}
+    .section-bg-block h2{font-size: 35px;padding: 0 25px;}
+    .title-div h2:before{width: 12px;height: 12px;top: 14px;}
+    .title-div h2:after{width: 12px;height: 12px;top: 14px;}
+    section.aboutUs .content-div p{font-size: 21px;}
     section.aboutUs .grid-boxes .grid-box{margin-right: 0;width: 100%;padding: 30px 0 20px;}
     section.aboutUs .grid-boxes{padding-top: 55px;max-width: 100%;padding: 0 30px;}
     section.aboutUs .content-div p {line-height: 115%;font-size: 92%;}
@@ -145,7 +192,6 @@
     #map-section #map-holder .overlay{height: 350px;}
     .AccessabilityLink {width: 100%;position: relative;right: auto;transform: translateY(0%);-webkit-transform: translateY(0%);-moz-transform: translateY(0%);-ms-transform: translateY(0%);-o-transform: translateY(0%);top: auto;margin-bottom: 20px;}
     
-    .section-bg-block h2{font-size: 10vw;}
     .item-box{width: 33%;}
     .grid-outer{ -webkit-justify-content: space-between;-moz-justify-content: space-between;justify-content: space-between;}
     .menumoduleitem{width: 100%;min-height: 120px;}
@@ -180,6 +226,11 @@
     #ReservationModal .modal-body {padding: 55px 16px 20px;}
     #ReservationModal .modal-dialog h3{font-size: 26px;}
     #ReservationModal .modal-dialog a.tel{font-size: 26px;}
+    .refIcon{width: 100%;height: 100%;display: block;}
+    
+    .grid-boxes .grid-box-title a{font-size: 25px;width: 145px;height: 145px;padding: 56px 0;}
+    section.aboutUs .grid-box-title{bottom: 80px;}
+    .section-bg-block{padding: 40px 0px 0;}
 }
 
 @media only screen and (max-width: 479px) {  
@@ -192,6 +243,10 @@
     .item-box h3{font-size: 20px;}
     .item-box { width: 45%;}
     .grid-item .details-inner{width: 40px;height: 40px;}
+    
+    .grid-boxes .grid-box-title a{font-size: 25px;width: 145px;height: 145px;padding: 56px 0;}
+    section.aboutUs .grid-box-title{bottom: 80px;}
+    .section-bg-block{padding: 40px 0px 0;}
     
 }
 

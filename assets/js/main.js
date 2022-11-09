@@ -19,17 +19,6 @@ jQuery(function() {
     
      
     
-     /*======================================
-        Header Menu
-    =======================================*/
-     setTimeout(function(){
-//            centerMenu(); 
-        }, 300);
-        
-    
-    
-    
-    
     /*===============================================
     	Menu
     ==================================================*/
@@ -47,17 +36,13 @@ jQuery(function() {
     ==================================================*/
 
     jQuery(window).bind("debouncedresize", function() {        
-        
-        // imgLiquid
-        if (jQuery.fn.imgLiquid) {
-            jQuery(".banner-image ,.image-block,.imagefluid").imgLiquid({
-                fill: true
-            });
-        }
-          AOS.init();
+       
+        AOS.init();
+
     });
    
-
+  
+   
    
     /*===============================================
         Slick  
@@ -70,6 +55,7 @@ jQuery(function() {
             arrows: false,
             autoplay: true,
             dots: true,
+            rtl: true,
             infinite: false,
             speed: 800,
             autoplaySpeed: 2500,
