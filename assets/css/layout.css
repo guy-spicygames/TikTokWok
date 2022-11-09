@@ -16,6 +16,9 @@
     #header-logo img{max-height: 155px;}
     .LogoCentered ul.menu li#header-logo{height: 155px;}
     .social-links{top: 45px;}
+    .section-bg-block.celebrate h2{font-size: 40px;}
+    .celebrate-inner a{ width: 170px;height: 44px;}
+    
     
 }
 
@@ -35,10 +38,9 @@
     .title-div h2:after{width: 15px;height: 15px;top: 18px;}
     .grid-boxes .grid-box-title a{font-size: 35px;width: 185px;height: 185px;padding: 67px 0;}
     section.aboutUs .grid-box-title{bottom: 109px;}
-    .section-bg-block{padding: 40px 0px 0;}
-    
-    
-    
+    section.aboutUs{padding: 40px 0px 0;}    
+    .section-bg-block.celebrate h2{font-size: 37px;}
+    .celebrate-inner a{width: 180px;height: 46px;}
 }
 
 @media (max-width: 1024px){
@@ -80,7 +82,7 @@
     .mobile-menu .main-menu ul li a.active{position: relative;padding: 5px 10px;color: #fff;width: 100%;}
     .mobile-menu .main-menu ul li a.active:after{position: absolute;content: "";left: 0;top: 0;background: #000;width: 100%;height: 100%;z-index: -1;}
     .grid-boxes .grid-box-title h3 a{font-size: 30px;}
-    .section-bg-block.celebrate h2{margin-left: 30px;font-size: 180%;}
+    .section-bg-block.celebrate h2{margin-left: 30px;font-size: 180%;margin: 0 0 15px;}
     .celebrate-inner{-webkit-flex-direction: column; -ms-flex-direction: column;  flex-direction: column;}
     .section-bg-block.celebrate{padding: 20px 20px;}
 /*    section.contactus h2 {font-size: 6vw;}*/
@@ -97,7 +99,7 @@
     .grid-boxes .grid-box-title a{font-size: 25px;width: 145px;height: 145px;padding: 56px 0;}
     section.aboutUs .grid-box-title{bottom: 80px;}
     
-    
+    .celebrate-inner a{height: 44px;}
 }
 
 
