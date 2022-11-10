@@ -264,19 +264,19 @@ select {
     outline: 0;
 }
 
-.bttn {
-    font-family: nyty;
-    font-weight: 700;
+.bttn {   
     color: #E00109;
     font-size: 22px;
-    padding: 4px 35px 6px;
-    height: 40px;
+    padding: 5px;;
+    height: 68px;
     line-height: inherit;
+    text-align: center;
+    min-width: 190px;
     border: none;
     color: #fff;
     text-transform: capitalize;
-    background: #5D00FF;
-    border-radius: 20px;
+    background: #b42828;;
+    border-radius: 0;
     display: inline-block;
     text-align: center;
     -webkit-transition: all 300ms ease-in-out 0s;
@@ -287,8 +287,7 @@ select {
 .bttn:hover,
 .bttn:focus,
 .bttn:active {
-    background: #0DFFF7;
-    color: #fff;
+   opacity: 0.8;
 }
 
 
@@ -1277,6 +1276,7 @@ section.aboutUs .grid-box-title {
     color: #000;
     font-size: 125%;
     text-align: center;
+    padding: 5px 0;
 }
 
 .celebrate-inner {
@@ -1350,6 +1350,10 @@ section.aboutUs .grid-box-title {
     -webkit-transform: translateZ(0);
     -ms-transform: translateZ(0);
     transform: translateZ(0);
+    transition: all .5s ease-in-out;
+-webkit-transition: all .5s ease-in-out;
+-moz-transition: all .5s ease-in-out;
+-o-transition: all .5s ease-in-out;
 }
 
 .grid-item .cover-image:after {
@@ -1363,7 +1367,7 @@ section.aboutUs .grid-box-title {
     height: 100%;
     width: 100%;
     opacity: 0;
-    background: rgba(0, 0, 0, 0.55);
+    background: rgba(0, 0, 0, 0.4);
     -webkit-transition: opacity 500ms ease-in-out 2ms;
     -moz-transition: opacity 500ms ease-in-out 2ms;
     -o-transition: opacity 500ms ease-in-out 2ms;
@@ -1376,6 +1380,14 @@ section.aboutUs .grid-box-title {
     opacity: 1;
 }
 
+.grid-item:hover .cover-image{
+    transform: scale(1.1);
+-webkit-transform: scale(1.1);
+-moz-transform: scale(1.1);
+-ms-transform: scale(1.1);
+-o-transform: scale(1.1);
+}
+
 .grid-item .plus-sign {
     position: absolute;
     left: 50%;
@@ -1386,9 +1398,12 @@ section.aboutUs .grid-box-title {
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     /*    font-size: 200%;*/
-    height: 70px;
+    height: 35px;
 }
-
+.grid-item .plus-sign img{
+    width: 35px;
+    height: 35px;
+}
 .grid-item .details-inner {
     position: absolute;
     top: 50%;
@@ -1599,7 +1614,6 @@ section.contactus .content-div span {
     min-height: 450px;
     margin: -1px 0 0 0;
 }
-
 #map-section .map-cover {
     cursor: pointer;
     position: absolute;
@@ -1615,8 +1629,46 @@ section.contactus .content-div span {
     z-index: 3;
     padding: 25px 45px;
     background: transparent;
+     display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+   -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    
+    
 }
 
+.waze-logo {
+    width: 65px;
+    height: 65px;
+    margin: 0 0 10px;
+    background: #ec3829;
+    border-radius: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
+ 
+}
+
+.waze-logo img {
+    width: 35px;
+    height: 35px;
+    color: #fff;
+}
 #map-section .map-cover h4 {
     font-size: 200%;
     margin-bottom: 20px;
@@ -1669,14 +1721,12 @@ section.contactus .content-div span {
 }
 
 #map-section .map-cover .open-map {
-    background: #ed3524;
     border-radius: 0px !important;
     color: #fff;
-    padding: 5px 20px;
     width: 100%;
     border-radius: 5px;
-    white-space: nowrap;
-    font-size: 93%;
+    font-size: 25px;
+    text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
 }
 
 .section-bg-block.contact-module {
@@ -1852,10 +1902,11 @@ section.contactus .content-div span {
 
 .grid-outer .box-image-animation img {
     height: 100%;
-    width: auto;
+    width: 100%;
     position: absolute;
-    left: -40%;
+/*    left: -40%;*/
     margin: 0px auto;
+    object-fit: cover;
     border-radius: 50%;
     z-index: 0;
     display: block;
@@ -1929,101 +1980,47 @@ section.contactus .content-div span {
     z-index: 1;
     opacity: 1;
 }
-
 .menumodal .close svg {
     fill: #ffffff;
 }
 
-#ReservationModal .modal-dialog {
-    max-width: 304px;
-    text-align: center;
-    border-radius: 0;
-    margin: 0 auto;
-}
-
-#ReservationModal .modal-dialog h3 {
-    font-size: 125%;
-    margin-bottom: 0;
-    color: #fff;
-}
-
-#ReservationModal .modal-dialog a.tel {
-    color: #fff;
-    margin: 5px 0 0;
-    display: block;
-    font-size: 125%;
-}
-
-#ReservationModal .modal-dialog a.bttn {
-    transition: all .5s ease-in-out;
-    -webkit-transition: all .5s ease-in-out;
-    cursor: pointer;
-    border: 1px solid transparent;
-    border-radius: 0px;
-    padding: 0;
-    background-color: #ed3524;
-    font-size: 100%;
-    color: #fff;
-    font-size: 20px;
-    padding: 5px 2px;
-    display: inline-block;
-    font-family: 'BarlowCondensedLight';
-    position: absolute;
-    bottom: -42px;
-    left: 0;
-    right: 0;
+#OrderformModal .image-div {
     width: 100%;
-    font-weight: 400;
-    max-width: 250px;
-    margin: 0 auto;
+    height: 450px;
 }
 
-#ReservationModal .modal-content {
-    background: url("../images/content/popup.jpg") no-repeat;
-    border-radius: 0;
-    position: relative;
-    background-size: cover;
-    background-position: center;
-    margin-top: 24vh;
-}
-
-#ReservationModal .modal-header {
-    border: none;
-    padding: 0;
-}
-
-#ReservationModal .modal-body {
-    padding: 85px 16px 20px;
-}
-
-#OrderformModal #subheadline {
-    text-align: center;
+#OrderformModal .image-div img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
 }
 
 #OrderformModal .modal-dialog {
     max-width: 700px;
 }
-
 #OrderformModal .modal-content {
-    background: url("../images/content/popup.jpg") no-repeat;
     border-radius: 0;
     position: relative;
-    background-size: cover;
-    background-position: center;
     margin-top: 20vh;
-    padding: 30px;
+    padding: 0px;
 }
 
-#OrderformModal .modal-content:after {
-    content: "";
-    position: absolute;
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    right: 8px;
-    left: 8px;
-    top: 8px;
-    bottom: 8px;
+.button-group {
+    padding: 5px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    justify-content: center;
 }
-
+ .button-group .bttn{
+    margin: 5px;
+    
+}
 #OrderformModal .modal-header button.close {
     position: absolute;
     left: 0;
@@ -2423,6 +2420,7 @@ section.contactus .content-div span {
 
 .top-item {
     width: 100%;
+    margin: 0 0 10px;
     display: -webkit-box;
     display: -moz-box;
     display: -ms-flexbox;
@@ -2460,6 +2458,7 @@ section.contactus .content-div span {
 .menumoduleitem .menuModuleTextItemDescription {
     color: #fff;
     font-size: 15px;
+    text-align: right;
 }
 
 .top-item .menuModuleTextItemTitle svg,
