@@ -25,11 +25,22 @@ jQuery(function() {
     jQuery(".nav-trigger").click(function() {
       jQuery(this).toggleClass("highlight");
       jQuery('body').toggleClass("nav-visible"); 
-      jquery('.header-right .main-menu').css('backgrond:red;');
         
    });
 
 
+   /*======================================
+        Header Menu
+    =======================================*/
+     setTimeout(function(){
+            centerMenu(); 
+        }, 300);
+         
+    
+    
+    
+    
+    
 
     /*===============================================
         debouncedresize
@@ -57,8 +68,8 @@ jQuery(function() {
             dots: true,
             rtl: true,
             infinite: false,
-            speed: 800,
-            autoplaySpeed: 2500,
+            autoplaySpeed: 6000,
+            speed: 300,
             fade: true,
             cssEase: 'linear'
         });
@@ -69,7 +80,7 @@ jQuery(function() {
     
  
     
-   $('.bounce a[href^="#"]').on('click',function (e) {
+   jQuery('.bounce a[href^="#"]').on('click',function (e) {
 	    e.preventDefault();
 	    var target = this.hash;
 	    var $target = $(target);
@@ -117,13 +128,13 @@ jQuery(function() {
     
     
     /**ENABLE MAP SCROLL**/
-    jQuery(".map-cover").click(function () {
-        $(this).addClass("clicked");
-        $(this).fadeOut();
-        $(this).parent().find(".overlay").hide();
-    });
-
-    
+//    jQuery(".map-cover").click(function () {
+//        $(this).addClass("clicked");
+//        $(this).fadeOut();
+//        $(this).parent().find(".overlay").hide();
+//    });
+//
+//    
    
     
 
@@ -148,3 +159,20 @@ jQuery(function() {
     
    
 });
+
+
+
+//Mainmenu 
+function centerMenu() {
+    var leftMenu = 4;
+    var leftMenuCount = leftMenu + 1;
+    var logoWidth = jQuery(".logo").outerWidth() / 2;
+    var menuWidth = 0;
+    for (count = 1; leftMenuCount > count; count++) { 
+        menuWidth += jQuery(".headerInner > nav > ul > li:nth-child(" + count + ")").outerWidth();}
+    if (jQuery(".mean-push").is(":visible")) {} else{            
+        var pullMargin = menuWidth + logoWidth;
+        jQuery(".headerInner > nav > ul").css("margin-left" , "-" + pullMargin + "px");
+        jQuery(".headerInner > nav > ul > li:nth-child(" + leftMenu + ")").css("margin-right" , jQuery(".logo").outerWidth() + "px");
+    }
+}
