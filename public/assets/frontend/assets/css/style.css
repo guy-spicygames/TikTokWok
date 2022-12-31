@@ -1921,6 +1921,9 @@ section.contactus .content-div span {
 .menumodal .modal-dialog {
     max-width: 960px;
 }
+#ShippingformModal .modal-dialog {
+    max-width: 960px;
+}
 
 .menumodal .modal-content {
     /*    background: #000;*/
@@ -1951,7 +1954,9 @@ section.contactus .content-div span {
 
 #OrderformModal .image-div {
     width: 100%;
-    height: 450px;
+    height: 510px;
+    border: 10px solid #fff;
+    border-radius: 10px;
 }
 
 #OrderformModal .image-div img {
@@ -1962,13 +1967,15 @@ section.contactus .content-div span {
 }
 
 #OrderformModal .modal-dialog {
-    max-width: 700px;
+    max-width: 870px;
 }
 #OrderformModal .modal-content {
-    border-radius: 0;
+    border-radius: 10px;
     position: relative;
-    margin-top: 20vh;
+    margin-top: 15vh;
     padding: 0px;
+    border: none;
+    background: #fff;
 }
 
 .button-group {
@@ -1988,27 +1995,47 @@ section.contactus .content-div span {
 }
 #OrderformModal .modal-header button.close {
     position: absolute;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    top: -80px;
+    left: inherit;
+    right: -30px;
+    top: -30px;
     z-index: 1;
     opacity: 1;
 }
 
-#OrderformModal .close svg {
-    fill: #ffffff;
-}
 
-#OrderformModal svg {
-    width: 50px;
-    height: 50px;
+#OrderformModal .close img {
+    width: 70px;
+    height: 70px;
 }
 
 #OrderformModal .modal-header {
     border: none;
     padding: 0;
+    z-index: 9;
+}
+#ShippingformModal .modal-header {
+    border: none;
+    padding: 0;
+    z-index: 9;
+}
+
+#ShippingformModal .close img {
+    width: 70px;
+    height: 70px;
+}
+
+#ShippingformModal .modal-header {
+    border: none;
+    padding: 0;
+    z-index: 9;
+}
+#ShippingformModal .modal-header button.close {
+    position: absolute;
+    left: inherit;
+    right: -30px;
+    top: -30px;
     z-index: 1;
+    opacity: 1;
 }
 
 #OrderformModal .modal-body {
@@ -2468,4 +2495,98 @@ section.contactus .content-div span {
 
 .menumodal.tabmodal .menuModuleTextItemSubjectDescription {
     color: #fff;
+}
+
+
+
+#ShippingformModal  .modal-content{
+    direction: ltr;
+    margin-top: 15vh;
+}
+
+#ShippingformModal form {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 100%;
+    padding: 10px
+}
+
+#ShippingformModal input {
+    border: 0;
+    border-bottom: 2px solid gray;
+    font-size: 18px;
+    height: 1.2rem;
+    margin-top: 0;
+    padding: .5em;
+    width: 100%;
+    color: #1C1C1C;
+    
+}
+#ShippingformModal .bttn {
+    font-size: 19px;
+    height: 38px;
+    min-width: 150px;
+}
+#ShippingformModal input:focus {
+    border-bottom: 3px solid #000
+}
+
+#ShippingformModal input[type=reset] {
+    background-color: transparent;
+    border-bottom: 0;
+    color: #686868;
+    font-size: 14px;
+    height: auto;
+    width: auto
+}
+
+#ShippingformModal .title {
+    font-weight: 500;
+    margin-block-end: 0;
+    width: 100%
+}
+
+#ShippingformModal .note {
+    font-size: 12px;
+    margin-block-start: 0;
+    width: 100%
+}
+
+#ShippingformModal .form-label {
+/*    padding: .5em;*/
+    width: 100%
+}
+
+#ShippingformModal .full-field {
+    width: 100%;
+    margin: 15px 0
+}
+
+#ShippingformModal .slim-field-left {
+   width: 50%;
+    margin: 15px 15px 15px 0
+}
+
+#ShippingformModal .slim-field-right {
+    flex: 1 150px;
+    margin: 15px 0 15px 15px
+}
+
+#ShippingformModal .my-button {
+    background-color: #000;
+    border-radius: 6px;
+    color: #fff;
+    margin: 10px;
+    padding: 6px 24px;
+    text-decoration: none
+}
+
+#ShippingformModal .my-button:hover {
+    background-color: #666
+}
+
+#ShippingformModal .my-button:active {
+    position: relative;
+    top: 1px
 }
