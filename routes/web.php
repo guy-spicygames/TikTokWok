@@ -19,6 +19,20 @@ Auth::routes();
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'home']);
 
+ 
+Route::get('/dashboard/categories', [App\Http\Controllers\CategoryController::class, 'index']);
+Route::post('/dashboard/categories', [App\Http\Controllers\CategoryController::class, 'store']);
+Route::get('/dashboard/categories/{category}', [App\Http\Controllers\CategoryController::class, 'show']);
+Route::put('/dashboard/categories/{category}', [App\Http\Controllers\CategoryController::class, 'update']);
+Route::delete('/dashboard/categories/{category}', [App\Http\Controllers\CategoryController::class, 'destroy']);
+
+Route::get('/dashboard/products', [App\Http\Controllers\ProductController::class, 'index']);
+Route::post('/dashboard/products', [App\Http\Controllers\ProductController::class, 'store']);
+Route::get('/dashboard/products/{product}', [App\Http\Controllers\ProductController::class, 'show']);
+Route::put('/dashboard/products/{product}', [App\Http\Controllers\ProductController::class, 'update']);
+Route::delete('/dashboard/products/{product}', [App\Http\Controllers\ProductController::class, 'destroy']);
+
+
 /*
 
 Route::get('/', [App\Http\Controllers\HomeController::class, 'root'])->name('root');
