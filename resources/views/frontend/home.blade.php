@@ -15,6 +15,7 @@
 
     <script src="{{asset('public/assets/frontend/assets/js/jquery.min.js')}}"></script>
     <!-- Le styles -->
+
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/bootstrap.min.css')}}" />
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/fontawesome.css')}}" />
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/slick.css')}}" />
@@ -22,6 +23,7 @@
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/aos.css')}}" />
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/style.css')}}" />
     <link rel="stylesheet" href="{{asset('public/assets/frontend/assets/css/layout.css')}}" />
+
 
 
 
@@ -954,7 +956,7 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
 
-    <script src="{{asset('public/assets/frontend/assets/js/jquery.min.js')}}"></script>
+    {{-- <script src="{{asset('public/assets/frontend/assets/js/jquery.min.js')}}"></script> --}}
     <script src="{{asset('public/assets/frontend/assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('public/assets/frontend/assets/js/debouncedresize.js')}}"></script>
     <script src="{{asset('public/assets/frontend/assets/js/aos.js')}}"></script>
@@ -962,7 +964,7 @@
     <script src="{{asset('public/assets/frontend/assets/js/slick.min.js')}}"></script>
     <script src="{{asset('public/assets/frontend/assets/js/lightbox.js')}}"></script>  
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initAutocomplete&libraries=places&v=weekly" defer
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDVha5rif1z-juaA2wFKmhfEsNXxX4sZrg&callback=initAutocomplete&libraries=places&v=weekly" defer
     ></script>
     <script src="{{asset('public/assets/frontend/assets/js/main.js')}}"></script>
     
@@ -980,7 +982,7 @@
       // Create the autocomplete object, restricting the search predictions to
       // addresses in the US and Canada.
       autocomplete = new google.maps.places.Autocomplete(address1Field, {
-        componentRestrictions: { country: ["us", "ca"] },
+        componentRestrictions: { country: ["il"] },
         fields: ["address_components", "geometry"],
         types: ["address"],
       });
@@ -990,9 +992,51 @@
       autocomplete.addListener("place_changed", fillInAddress);
     }
 
+
+    function getDistance(destination) {
+
+        //31.753253970288608, 35.19183677952392
+        //'53.487362,-2.227197';
+
+        var origin = '31.753253970288608, 35.19183677952392';
+        //var destination = '51.516595,-0.129279';
+
+        var distanceService = new google.maps.DistanceMatrixService();
+        distanceService.getDistanceMatrix({
+            origins: [origin],
+            destinations: [destination],
+            travelMode: 'DRIVING',
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+            if (status !== 'OK') {
+            alert('Error was: ' + status);
+            } else {
+            const distance = response.rows[0].elements[0].distance.text
+            //document.getElementById('distance').innerText = distance;
+            alert(distance);
+            }
+        });
+
+        //unitSystem: google.maps.UnitSystem.IMPERIAL,
+    }    
+
     function fillInAddress() {
+
+        //alert("Address is changed");
+
+        //place.lat
+        
+        
+
+        //alert(place.geometry.location.lat()+","+place.geometry.location.lng());
+
       // Get the place details from the autocomplete object.
       const place = autocomplete.getPlace();
+
+      getDistance(place.geometry.location.lat()+","+place.geometry.location.lng());
+      
       let address1 = "";
       let postcode = "";
 
@@ -1003,6 +1047,9 @@
       for (const component of place.address_components) {
         // @ts-ignore remove once typings fixed
         const componentType = component.types[0];
+        
+
+        
 
         switch (componentType) {
           case "street_number": {
@@ -1046,8 +1093,9 @@
     }
 
     window.initAutocomplete = initAutocomplete;
-        
-        
+              
+
+
     </script>
 
 </body>
