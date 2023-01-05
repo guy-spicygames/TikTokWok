@@ -2518,7 +2518,7 @@ section.contactus .content-div span {
     font-size: 18px;
     height: 1.2rem;
     margin-top: 0;
-    padding: .5em;
+    padding: 5px 0;
     width: 100%;
     color: #1C1C1C;
     
@@ -2594,4 +2594,13 @@ section.contactus .content-div span {
 
 .pac-container {
     z-index: 10000 !important;
+}
+
+#err_distance {
+  color:#ff0000;
+    line-height: 1.1;
+}
+
+.savebtn{
+    margin: 0 10px 0 0;
 }

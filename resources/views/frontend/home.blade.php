@@ -471,6 +471,8 @@
                         <div class="modal-body">
                           <form id="address-form" action="" method="get" autocomplete="off">                         
                           <p class="note"><em>* = required field</em></p>
+                          <span id="err_distance"></span><br>
+                              
                           <label class="full-field">                         
                             <span class="form-label">Deliver to*</span>
                             <input
@@ -493,14 +495,14 @@
                             <input id="state" name="state" required />
                           </label>
                           <label class="slim-field-right" for="postal_code">
-                            <span class="form-label">Zip code*</span>
+                            <span class="form-label">Mobile number*</span>
                             <input id="postcode" name="postcode" required />
                           </label>
                           <label class="full-field">
                             <span class="form-label">Country/Region*</span>
                             <input id="country" name="country" required />
                           </label>
-                          <button type="button" class="bttn">Save address</button>
+                          <button type="button" class="bttn savebtn">Save address</button>
                           <input type="reset" value="Clear form" />
                         </form>
 
@@ -1014,9 +1016,17 @@
             alert('Error was: ' + status);
             } else {
             const distance = response.rows[0].elements[0].distance.text
-            //document.getElementById('distance').innerText = distance;
+//            document.getElementById('distance').innerText = distance;
             alert(distance);
+               let showmessage = distance.split(".");
+                if(showmessage[0] > 10){
+                    document.getElementById('err_distance').innerText = "Sorry, No delivery to this place. ";
+                }
+                else{
+                    document.getElementById('err_distance').innerText = "";
+                }
             }
+            
         });
 
         //unitSystem: google.maps.UnitSystem.IMPERIAL,
