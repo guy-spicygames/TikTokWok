@@ -1922,11 +1922,10 @@ section.contactus .content-div span {
     max-width: 960px;
 }
 #ShippingformModal .modal-dialog {
-    max-width: 960px;
+    max-width: 860px;
 }
 
 .menumodal .modal-content {
-    /*    background: #000;*/
     margin-top: 20vh;
 }
 
@@ -2564,8 +2563,8 @@ section.contactus .content-div span {
 }
 
 #ShippingformModal .slim-field-left {
-   width: 50%;
-    margin: 15px 15px 15px 0
+   width: 49%;
+    margin: 15px 0px 15px 0
 }
 
 #ShippingformModal .slim-field-right {
